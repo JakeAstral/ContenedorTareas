@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Personal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a mi página personal</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Contenedor Tareas</a></li>
+                <li><a href="practica5.html">Principal</a></li>
+                <li><a href="informacion.html">Información Personal</a></li>
+                <li><a href="academica.html">Información Académica</a></li>
+                <li><a href="laboral.html">Situación Laboral</a></li>
+                <li><a href="actividades.html">Actividades Extraescolares</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button class="modal-btn-open" id="open-modal-btn">Abrir Panel de Configuración</button>
+
+    <!-- Modal -->
+    <div id="config-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close-btn">&times;</span>
+            <h2>Panel de Configuración</h2>
+            <form id="config-form">
+                <!-- Fondo -->
+                <h3>Fondo</h3>
+                <label for="body-bg">Fondo de Body:</label>
+                <input type="color" id="body-bg" name="body-bg" value="#f4f4f4"><br><br>
+
+                <label for="nav-bg">Fondo de Navegación:</label>
+                <input type="color" id="nav-bg" name="nav-bg" value="#333"><br><br>
+
+                <label for="section-bg">Fondo de Section:</label>
+                <input type="color" id="section-bg" name="section-bg" value="#ffffff"><br><br>
+
+                <!-- Links -->
+                <h3>Links</h3>
+                <label for="link-color">Color de enlace:</label>
+                <input type="color" id="link-color" name="link-color" value="#007bff"><br><br>
+
+                <label for="link-bg">Color de fondo del enlace:</label>
+                <input type="color" id="link-bg" name="link-bg" value="#ffffff"><br><br>
+
+                <label for="link-radius">Redondear enlace (px):</label>
+                <input type="number" id="link-radius" name="link-radius" min="0" max="50" value="5"><br><br>
+
+                <!-- Imágenes -->
+                <h3>Imágenes</h3>
+                <label for="img-size">Tamaño de la imagen:</label>
+                <select id="img-size" name="img-size">
+                    <option value="small">Pequeña</option>
+                    <option value="medium">Mediana</option>
+                    <option value="large">Grande</option>
+                </select><br><br>
+
+                <label for="img-border">Color de borde:</label>
+                <input type="color" id="img-border" name="img-border" value="#000000"><br><br>
+
+                <label for="img-border-width">Grosor de borde (px):</label>
+                <input type="number" id="img-border-width" name="img-border-width" value="2" min="0" max="10"><br><br>
+
+                <label for="img-radius">Redondear imagen (px):</label>
+                <input type="number" id="img-radius" name="img-radius" min="0" max="50" value="10"><br><br>
+
+                <label for="img-shadow">Sombra en imagen:</label>
+                <input type="checkbox" id="img-shadow" name="img-shadow"><br><br>
+
+                <!-- Lista -->
+                <h3>Lista</h3>
+                <label for="ul-bg">Fondo de lista (ul):</label>
+                <input type="color" id="ul-bg" name="ul-bg" value="#e2e2e2"><br><br>
+
+                <label for="li-bg">Fondo de item de lista (li):</label>
+                <input type="color" id="li-bg" name="li-bg" value="#ffffff"><br><br>
+
+                <label for="li-border">Borde de item de lista (li):</label>
+                <input type="color" id="li-border" name="li-border" value="#ccc"><br><br>
+
+                <label for="li-color">Color de texto (li):</label>
+                <input type="color" id="li-color" name="li-color" value="#333"><br><br>
+
+                <!-- Párrafos y Títulos -->
+                <h3>Textos</h3>
+                <label for="p-bg">Fondo de párrafo:</label>
+                <input type="color" id="p-bg" name="p-bg" value="#ffffff"><br><br>
+
+                <label for="p-color">Color de párrafo:</label>
+                <input type="color" id="p-color" name="p-color" value="#333"><br><br>
+
+                <label for="p-size">Tamaño de párrafo (px):</label>
+                <input type="number" id="p-size" name="p-size" min="10" max="30" value="16"><br><br>
+
+                <label for="h-bg">Fondo de Títulos (h1, h2...):</label>
+                <input type="color" id="h-bg" name="h-bg" value="#f0f0f0"><br><br>
+
+                <label for="h-color">Color de Títulos (h1, h2...):</label>
+                <input type="color" id="h-color" name="h-color" value="#333"><br><br>
+
+                <label for="h-size">Tamaño de Títulos (h1, h2...):</label>
+                <input type="number" id="h-size" name="h-size" min="20" max="60" value="24"><br><br>
+
+                <button type="submit">Aplicar cambios</button>
+            </form>
+        </div>
+        <div class="modal-live" id="modal-live">
+            <nav id="nav-ejemplo">NAV Ejemplo</nav>
+            <section id="section-ejemplo">Section Ejemplo</section>
+            <a href="" id="enlace-com">enlace.com</a>
+            <img src="practica5.jpg" alt="" id="imagen-ejemplo">
+            <ul id="lista-ejemplo">
+                <li id="lista1">lista1</li>
+                <li id="lista2">lista2</li>
+            </ul>
+            <p id="parrafo-ejemplo">Parrafo ejemplo</p>
+            <h1 id="h1-ejemplo">H1 ejemplo</h1>
+            <h2 id="h2-ejemplo">H2 ejemplo</h2>
+        </div>
+    </div>
+    <section>
+        <h2>¿De qué trata esta página?</h2>
+        <div class="container">
+            <p>Esta página contiene toda mi información personal, académica, laboral y extracurricular.</p>
+            <img src="practica5.jpg" alt="">
+        </div>
+    </section>
+    <footer>
+        Programacion Web I
+    </footer>
+    <script src="coockie.js">
+        applyStylesFromCookies()
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
