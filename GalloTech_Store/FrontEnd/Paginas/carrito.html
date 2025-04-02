@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preload" href="../Utilidades/css/normalize.css" as="style">
+        <link rel="stylesheet" href="../Utilidades/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preload" href="../Utilidades/css/style.css" as="style">
+        <link href="../Utilidades/css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../Utilidades/img/Gallo_logo_Mini.png">
+        <title>Gallo Tech</title>
+</head>
+<body>
+    <div class="cart__container">
+        <header class="main__header">
+            <div class="header__content">
+                <a href="tienda.html" class="logo__small">
+                    <img src="../Utilidades/img/Gallo_logo_Mini.png" alt="">
+                </a>
+                <div class="search__container">
+                    <input type="text" placeholder="Buscar productos...">
+                    <button class="search__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__icons">
+                    <a href="configuracion.html" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </a>
+                    <a href="contacto.html" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </a>
+                    <a href="carrito.html" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </a>
+                    <button id="logoutBtn" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="cart__content">
+            <div class="cart__items">
+                <h1>Carrito de Compras</h1>
+                
+                <div class="cart__item">
+                    <div class="item__image">
+                        <img src="../Utilidades/img_productos/Laptops/Lenovo_Ideapad_Gaming3.webp" alt="Lenovo Ideapad">
+                    </div>
+                    <div class="item__details">
+                        <h3>Lenovo Ideapad</h3>
+                        <p>$10,700 MXN</p>
+                    </div>
+                    <div class="item__quantity">
+                        <button class="quantity__btn">-</button>
+                        <span>1</span>
+                        <button class="quantity__btn">+</button>
+                    </div>
+                    <button class="delete__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="cart__item">
+                    <div class="item__image">
+                        <img src="../Utilidades/img_productos/Laptops/Lenovo_Legion.webp" alt="Lenovo Legion">
+                    </div>
+                    <div class="item__details">
+                        <h3>Lenovo Legion</h3>
+                        <p>$13,000 MXN</p>
+                    </div>
+                    <div class="item__quantity">
+                        <button class="quantity__btn">-</button>
+                        <span>1</span>
+                        <button class="quantity__btn">+</button>
+                    </div>
+                    <button class="delete__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="cart__item">
+                    <div class="item__image">
+                        <img src="../Utilidades/img_productos/Laptops/1703779699_7976.png" alt="Lenovo Legion Slim">
+                    </div>
+                    <div class="item__details">
+                        <h3>Lenovo Legion Slim</h3>
+                        <p>$9,500 MXN</p>
+                    </div>
+                    <div class="item__quantity">
+                        <button class="quantity__btn">-</button>
+                        <span>1</span>
+                        <button class="quantity__btn">+</button>
+                    </div>
+                    <button class="delete__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="cart__total">
+                    <p>Total: <span>$33,200 MXN</span></p>
+                    <button class="btn btn__primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Utilidades/js/tienda.js"></script>
+    <script src="../Utilidades/js/configuracion.js"></script>
+</body>
+</html>

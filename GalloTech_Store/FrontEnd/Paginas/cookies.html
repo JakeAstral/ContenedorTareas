@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallo Tech - Administración de Cookies</title>
+    <link rel="stylesheet" href="../Utilidades/css/style.css">
+    <link rel="shortcut icon" href="Utilidades/img/Gallo_logo_Mini.png">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .admin-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .admin-header h1 {
+            margin-left: 20px;
+        }
+        
+        .cookie-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .cookie-section h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #e74c4c;
+        }
+        
+        .cookie-data {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin-bottom: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-danger {
+            background-color: #e74c4c;
+        }
+        
+        .btn-danger:hover {
+            background-color: #d43c3c;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4361ee;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <div class="logo-small">
+                <svg viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="95" fill="white" />
+                    <path
+                        d="M100,10 C48.5,10 7,51.5 7,103 C7,154.5 48.5,196 100,196 C151.5,196 193,154.5 193,103 C193,51.5 151.5,10 100,10 Z M100,180 C57.5,180 23,145.5 23,103 C23,60.5 57.5,26 100,26 C142.5,26 177,60.5 177,103 C177,145.5 142.5,180 100,180 Z"
+                        fill="#1a1a1a"
+                    />
+                    <path
+                        d="M120,70 C110,60 95,65 85,75 C75,85 70,100 80,110 C90,120 105,115 115,105 C125,95 130,80 120,70 Z"
+                        fill="#1a1a1a"
+                    />
+                    <path
+                        d="M80,130 C90,140 105,135 115,125 C125,115 130,100 120,90 C110,80 95,85 85,95 C75,105 70,120 80,130 Z"
+                        fill="#1a1a1a"
+                    />
+                </svg>
+            </div>
+            <h1>Administración de Gallo Cookies</h1>
+        </div>
+        
+        <div class="cookie-section">
+            <h2>Usuarios Registrados</h2>
+            <div id="usersData" class="cookie-data">Cargando...</div>
+            <div class="button-group">
+                <button id="refreshUsers" class="btn btn-primary">Actualizar</button>
+                <button id="deleteUsers" class="btn btn-danger">Eliminar Todos</button>
+            </div>
+        </div>
+        
+        <div class="cookie-section">
+            <h2>Sesión Activa</h2>
+            <div id="sessionData" class="cookie-data">Cargando...</div>
+            <div class="button-group">
+                <button id="refreshSession" class="btn btn-primary">Actualizar</button>
+                <button id="deleteSession" class="btn btn-danger">Cerrar Sesión</button>
+            </div>
+        </div>
+        
+        <div class="cookie-section">
+            <h2>Todas las Cookies</h2>
+            <div id="allCookies" class="cookie-data">Cargando...</div>
+            <div class="button-group">
+                <button id="refreshAll" class="btn btn-primary">Actualizar</button>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="back-link">Volver al Inicio</a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos DOM
+            const usersData = document.getElementById('usersData');
+            const sessionData = document.getElementById('sessionData');
+            const allCookies = document.getElementById('allCookies');
+            
+            // Botones
+            document.getElementById('refreshUsers').addEventListener('click', showUsers);
+            document.getElementById('deleteUsers').addEventListener('click', deleteUsers);
+            document.getElementById('refreshSession').addEventListener('click', showSession);
+            document.getElementById('deleteSession').addEventListener('click', deleteSession);
+            document.getElementById('refreshAll').addEventListener('click', showAllCookies);
+            
+            // Mostrar datos iniciales
+            showUsers();
+            showSession();
+            showAllCookies();
+            
+            // Función para obtener una cookie por nombre
+            function getCookie(name) {
+                const nameEQ = name + '=';
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+                }
+                return null;
+            }
+            
+            // Función para mostrar usuarios
+            function showUsers() {
+                const usersCookie = getCookie('galloTechUsers');
+                if (usersCookie) {
+                    try {
+                        const users = JSON.parse(usersCookie);
+                        usersData.textContent = JSON.stringify(users, null, 2);
+                    } catch (e) {
+                        usersData.textContent = 'Error al parsear la cookie: ' + e.message;
+                    }
+                } else {
+                    usersData.textContent = 'No hay usuarios registrados';
+                }
+            }
+            
+            // Función para mostrar sesión
+            function showSession() {
+                const sessionCookie = getCookie('galloTechActiveSession');
+                if (sessionCookie) {
+                    try {
+                        const session = JSON.parse(sessionCookie);
+                        sessionData.textContent = JSON.stringify(session, null, 2);
+                    } catch (e) {
+                        sessionData.textContent = 'Error al parsear la cookie: ' + e.message;
+                    }
+                } else {
+                    sessionData.textContent = 'No hay sesión activa';
+                }
+            }
+            
+            // Función para mostrar todas las cookies
+            function showAllCookies() {
+                const cookies = document.cookie.split(';');
+                if (cookies.length > 0 && cookies[0] !== '') {
+                    const cookiesObj = {};
+                    cookies.forEach(cookie => {
+                        const parts = cookie.split('=');
+                        const name = parts[0].trim();
+                        const value = parts.slice(1).join('=');
+                        cookiesObj[name] = decodeURIComponent(value);
+                    });
+                    allCookies.textContent = JSON.stringify(cookiesObj, null, 2);
+                } else {
+                    allCookies.textContent = 'No hay cookies';
+                }
+            }
+            
+            // Función para eliminar usuarios
+            function deleteUsers() {
+                if (confirm('¿Estás seguro de que quieres eliminar todos los usuarios registrados?')) {
+                    document.cookie = 'galloTechUsers=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+                    showUsers();
+                    showAllCookies();
+                }
+            }
+            
+            // Función para eliminar sesión
+            function deleteSession() {
+                document.cookie = 'galloTechActiveSession=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+                showSession();
+                showAllCookies();
+            }
+        });
+    </script>
+</body>
+</html>

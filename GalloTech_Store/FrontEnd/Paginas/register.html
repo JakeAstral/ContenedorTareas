@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preload" href="../Utilidades/css/normalize.css" as="style">
+        <link rel="stylesheet" href="../Utilidades/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preload" href="../Utilidades/css/style.css" as="style">
+        <link href="../Utilidades/css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../Utilidades/img/Gallo_logo_Mini.png">
+        <title>Gallo Tech</title>
+</head>
+<body>
+    <div class="register__container">
+        <div class="register__sidebar">
+            <div class="logo__container">
+                <div class="logo__small">
+                    <img src="../Utilidades/img/Gallo_logo_Mini.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="register__content">
+            <div class="register__form">
+                <h1>Crea tu cuenta</h1>
+                
+                <form>
+                    <div class="form__group">
+                        <input type="text" id="usuario" placeholder="Usuario" required>
+                    </div>
+                    
+                    <div class="form__group">
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                    </div>
+
+                    <div id="errorMessage" class="error__message"></div>
+                    
+                    <div class="form__buttons">
+                        <button type="button" id="registerBtn" class="btn btn__primary">Confirmar</button>
+                        <a href="../index.html" class="btn btn__primary">Cancelar</a>
+                        <a href="cookies.html" class="btn btn__primary">Cookies</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="register__sidebar"></div>
+    </div>
+    <script src="../Utilidades/js/register.js"></script>
+    <script src="../Utilidades/js/configuracion.js"></script>
+</body>
+</html>

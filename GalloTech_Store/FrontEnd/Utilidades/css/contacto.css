@@ -1,0 +1,62 @@
+/* Contacto */
+.contact__container {
+    min-height: 100vh;
+    background-color: var(--Primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact__content {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+}
+
+.contact__content h1 {
+    color: var(--White);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.contact__layout {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact__logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__form {
+    flex: 1;
+}
+
+.contact__form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Light-Gray);
+    border-radius: 4px;
+    resize: none;
+}
+
+.contact__footer {
+    text-align: center;
+}
+
+.contact__footer h2 {
+    color: var(--White);
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        flex-direction: column;
+    }
+}
