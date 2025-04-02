@@ -1,0 +1,140 @@
+@import url(variables.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(login.css);
+@import url(tienda.css);
+@import url(registro.css);
+@import url(contacto.css);
+@import url(configuracion.css);
+@import url(carrito.css);
+
+/*Globales*/
+html{
+    color: var(--blanco);
+    font-size: 62.5%;
+    box-sizing: border-box; /*Codigo de mejora para el box model*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /* 1rem = 10px*/
+    font-family: var(--fuentePrincipal), Helvetica, sans-serif;
+    /*Tipografia*/
+    h1{
+        font-size: 3.8rem;
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    h3{
+        font-size: 1.8rem;
+    }
+    h1,h2,h3{
+        text-align: center;
+    }
+    .Eslogan{
+        text-align: center;
+        margin: 0,auto;
+        font-size: 3;
+    }
+    a{text-decoration: none;}
+    img{width: 100%;}
+    button{border: none;}
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--White);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn__primary {
+    background-color: var(--Secondary);
+    color: var(--White);
+}
+
+.btn__primary:hover {
+    background-color: var(--Secondary);
+}
+
+/* Estilos del logo */
+.logo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 23rem;
+    height: 23rem;
+}
+
+.logo__small {
+    width: 100px;
+    height: 100px;
+}
+
+.logo__large {
+    width: 150px;
+    height: 150px;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: var(--Primary);
+    margin: 10px 0;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+    .logo__small{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .search-container {
+        order: 3;
+        width: 100%;
+        margin: 10px 0 0;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,50 @@
+:root{
+    --Primary: #e74c4c;
+    --Secondary: #4361ee;
+    --Light-Primary: rgba(255, 255, 255, 0.2);
+    --Crimson: #841010;
+    --Red: #9d1111;
+    --Orange: #ff8c00;
+    --ShadowOrange: #845011;
+    --White: #FFFFFF;
+    --Light-Gray: #f0f0f0;
+    --Black: #000000;
+
+    --red-static: #e74c4c;
+    --blue-static: #4361ee;
+    --white-static: #FFF;
+    --black-static: #000;
+
+    
+
+    --fuentePrincipal: 'Roboto', bold;
+    --fuenteSecundaria: 'staatliches', cursive;
+}
+
+/* Tema por defecto claro */
+body.theme-default-light {
+    --Primary: #e74c4c; /* Rojo */
+    --Secondary: #4361ee; /* Azul */
+}
+
+/* Tema invertido claro */
+body.theme-inverted-light {
+    --Primary: #4361ee; /* Azul */
+    --Secondary: #ff0000; /* Rojo */
+}
+
+/* Tema por defecto oscuro */
+body.theme-default-dark {
+    --Primary: #e74c4c; /* Rojo */
+    --Secondary: #4361ee; /* Azul */
+    --White: #2c2c2c;
+    --Black: #FFF;
+}
+
+/* Tema invertido oscuro */
+body.theme-inverted-dark {
+    --Primary: #4361ee; /* Azul */
+    --Secondary: #ff0000; /* Rojo */
+    --White: #2c2c2c;
+    --Black: #FFF;
+}

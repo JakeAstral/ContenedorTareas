@@ -1,0 +1,129 @@
+/* Configuración */
+.config__container {
+    min-height: 100vh;
+}
+
+.config__panels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.config__panel {
+    background-color: var(--Light-Gray);
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel__header {
+    padding: 10px 15px;
+    width: 100%;
+    background-color: var(--Primary);
+    color: var(--White);
+    border-bottom: 1px solid var(--Black);
+    font-weight: bold;
+}
+
+.panel__content {
+    padding: 20px;
+}
+
+.config__option {
+    margin-bottom: 20px;
+}
+
+.config__option h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.color__box {
+    border: 1px solid var(--Black);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color__sample {
+    width: 30px;
+    height: 30px;
+}
+
+.white__bg {
+    background-color: var(--White);
+    border: 1px solid var(--Black);
+}
+
+.red__bg {background-color: var(--Primary);}
+
+.blue__bg {background-color: var(--Secondary);}
+
+.color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.color__selector {
+    display: none; /* Ocultar el input */
+}
+
+.color__label {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.color__selector:checked + .color__label .color__box {
+    border: 2px solid var(--Black); /* Resaltar el color cuando está seleccionado */
+}
+
+/* Colores de los temas, se cambian cuando el radio está seleccionado */
+#theme-default-red:checked ~ .config__panel {
+    --Primary: var(--Red);
+}
+
+#theme-inverted-blue:checked ~ .config__panel {
+    --Secondary: var(--Blue);
+}
+
+/* Opciones de color para mostrar cuando se selecciona el radio */
+.red__bg {
+    background-color: var(--red-static);
+}
+
+.blue__bg {
+    background-color: var(--blue-static);
+}
+
+/* Resaltar los colores seleccionados */
+.color__sample {
+    transition: background-color 0.3s ease-in-out;
+}
+
+#theme-default-red:checked + .color__label .color__sample {
+    background-color: var(--Primary);
+}
+
+#theme-inverted-blue:checked + .color__label .color__sample {
+    background-color: var(--Secondary);
+}
+
+@media (max-width: 768px) {
+    .config__panel {
+        max-width: 1200px;
+    }
+}

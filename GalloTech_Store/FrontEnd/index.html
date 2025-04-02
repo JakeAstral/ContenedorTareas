@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preload" href="Utilidades/css/normalize.css" as="style">
+        <link rel="stylesheet" href="Utilidades/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preload" href="Utilidades/css/style.css" as="style">
+        <link href="Utilidades/css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="Utilidades/img/Gallo_logo_Mini.png">
+        <title>Gallo Tech</title>
+</head>
+<body>
+    <div class="login__container">
+        <div class="login__left">
+            <div class="logo__container">
+                <div class="logo">
+                    <img src="Utilidades/img/Gallo_logo_Mini.png" alt="">
+                </div>
+            </div>
+            <h1>Bienvenido a Gallo Tech</h1>
+        </div>
+        <div class="login__right">
+            <div class="login__form">
+                <div class="form__group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" requiered>
+                </div>
+                <div class="form__group">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" requiered>
+                </div>
+                <div class="form__buttons">
+                    <button id="loginBtn" class="btn btn__primary">Iniciar Sesión</button>
+                    <button class="btn btn__primary">Reiniciar Campos</button>
+                </div>
+                <div class="form__links">
+                    <a href="Paginas/register.html">Registrarse</a>
+                    <a href="#">Olvidé mi contraseña</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Utilidades/js/login.js"></script>
+    <script src="Utilidades/js/configuracion.js"></script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preload" href="../Utilidades/css/normalize.css" as="style">
+        <link rel="stylesheet" href="../Utilidades/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preload" href="../Utilidades/css/style.css" as="style">
+        <link href="../Utilidades/css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../Utilidades/img/Gallo_logo_Mini.png">
+        <title>Gallo Tech</title>
+</head>
+<body>
+    <div class="store__container">
+        <header class="main__header">
+            <div class="header__content">
+                <a href="tienda.html" class="logo__small">
+                    <img src="../Utilidades/img/Gallo_logo_Mini.png" alt="Gallo Logo">
+                </a>
+                <div class="search__container">
+                    <input type="text" placeholder="Buscar productos...">
+                    <button class="search__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__icons">
+                    <a href="configuracion.html" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </a>
+                    <a href="contacto.html" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </a>
+                    <a href="carrito.html" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </a>
+                    <button id="logoutBtn" class="icon__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="categories__container">
+            <button class="nav__arrow left__arrow">&lt;</button>
+            <div class="categories">
+                <a href="#" class="category__link" data-category="computadoras">Computadoras</a>
+                <a href="#" class="category__link" data-category="telefonos">Teléfonos</a>
+                <a href="#" class="category__link" data-category="tablets">Tablets</a>
+                <a href="#" class="category__link" data-category="accesorios">Accesorios</a>
+            </div>
+            <button class="nav__arrow right__arrow">&gt;</button>
+        </div>
+
+        <div class="products__grid" id="productsGrid">
+            <div class="product__card" data-category="computadoras">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Laptops/Lenovo_Ideapad_Gaming3.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Lenovo Ideapad</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$10,700 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="computadoras">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Laptops/Lenovo_Legion.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Lenovo Legion</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$13,000 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="computadoras">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Laptops/82K101F4LM.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Lenovo Legion Slim</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$12,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="computadoras">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Laptops/HP_Visctus_16.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>HP Victus 16</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$11,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="computadoras">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Laptops/HP_Pavilion_Gaming.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>HP Pavilion Gaming</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$12,300 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="computadoras">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Laptops/Lenovo_LegionY540.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Lenovo Legion</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$11,000 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="telefonos">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Celulares/SamsungS23.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Samsung S23</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$9,000 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="telefonos">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Celulares/Moto_edge30.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Moto Edge 30</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$2,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="telefonos">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Celulares/Note13_Pro.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Redmi Note 13 Pro</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$4,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="telefonos">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Celulares/Poco_X6_Pro.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Poco X6 Pro</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$3,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="telefonos">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Celulares/Poco_M5s.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Poco M5 S</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$2,400 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="telefonos">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Celulares/Xiaomi_14T.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Xiaomi 14T</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$2,800 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="tablets">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Tablets/Matepad_2023.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Huawei Matepad 2023</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$3,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="tablets">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Tablets/S9_FE.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Samsung S9 FE</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$4,200 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="tablets">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Tablets/Xiaomi_Pad_Pro.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Xiaomi Pad Pro</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$5,000 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="tablets">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Tablets/Samsung_Tabs6_Lite.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Samsung Tab 6 Lite</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$3,700 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="tablets">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Tablets/S8Pus.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Samsung S8 Plus</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$3,400 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="tablets">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Tablets/SE_11.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Samsung SE 11</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$2,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="accesorios">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Accesorios/audifonos.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Audifonos bits</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$1,200 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="accesorios">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Accesorios/AurumOE_Gray.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Audifonos Aurrum</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$3,200 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="accesorios">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Accesorios/Aux_2M.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Cable Aux Ugreen 2M</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$100 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="accesorios">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Accesorios/Base_enfriamento.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Base de enfriamiento</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$1,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="accesorios">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Accesorios/HDMI__10M.webp" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Cable HDMI 10M</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$250 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__card" data-category="accesorios">
+                <div class="product__image">
+                    <img src="../Utilidades/img_productos/Accesorios/Bose.png" alt="product img">
+                </div>
+                <div class="product__info">
+                    <h3>Audifonos Bose</h3>
+                    <div class="product__price--cart">
+                        <p class="product__price">$2,500 MXN</p>
+                        <button class="cart__button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../Utilidades/js/tienda.js"></script>
+    <script src="../Utilidades/js/configuracion.js"></script>
+</body>
+</html>
